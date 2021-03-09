@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
+  <source>
+    <originFiles name="simple_dft.cpp" path="/home/hayden/Documents/dft_hls/simple_dft.cpp"/>
+  </source>
+  <testbench>
+    <originFiles name="dft_test.cpp" path="/home/hayden/Documents/dft_hls/dft_test.cpp"/>
+  </testbench>
+</autopilotfilemapping:AutoPilotFileMapping>
