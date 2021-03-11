@@ -1,0 +1,554 @@
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2020.2 (64-bit)
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2020.2 (64-bit)
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2020.2 (64-bit)
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2020.2 (64-bit)
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2020.2 (64-bit)
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2020.2 (64-bit)
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xc7z020-clg484-1'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1510] Running: set_part xc7z020clg484-1 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [HLS 200-1510] Running: set_directive_top -name matrix_vector matrix_vector 
+INFO: [HLS 200-1510] Running: set_directive_array_partition -type complete -dim 2 matrix_vector M 
+INFO: [HLS 200-1510] Running: set_directive_array_partition -type complete -dim 1 matrix_vector V_In 
+INFO: [HLS 200-1510] Running: set_directive_pipeline -II 1 matrix_vector/data_loop 
+INFO: [HLS 200-1510] Running: set_directive_unroll -factor 8 -skip_exit_check matrix_vector/dot_product_loop 
+INFO: [HLS 200-1510] Running: csynth_design 
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.01 seconds; current allocated memory: 76.382 MB.
+INFO: [HLS 200-10] Analyzing design file 'simple_dft.cpp' ... 
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 0.2 seconds. CPU system time: 0.14 seconds. Elapsed time: 0.18 seconds; current allocated memory: 76.792 MB.
+INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
+INFO: [HLS 214-186] Unrolling loop 'data_loop' (simple_dft.cpp:8:5) in function 'matrix_vector' completely with a factor of 8 (simple_dft.cpp:8:5)
+WARNING: [HLS 214-189] Pipeline directive for loop 'data_loop' (simple_dft.cpp:8:5) in function 'matrix_vector' has been removed because the loop is unrolled completely (simple_dft.cpp:8:5)
+INFO: [HLS 214-248] complete partitioned array 'M' on dimension 2 (simple_dft.cpp:5:63)
+INFO: [HLS 214-248] complete partitioned array 'V_In' on dimension 1 (simple_dft.cpp:6:9)
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 2.38 seconds. CPU system time: 0.17 seconds. Elapsed time: 1.89 seconds; current allocated memory: 79.353 MB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0 seconds; current allocated memory: 79.354 MB.
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0.02 seconds. CPU system time: 0 seconds. Elapsed time: 0.01 seconds; current allocated memory: 80.487 MB.
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0.03 seconds. CPU system time: 0 seconds. Elapsed time: 0.03 seconds; current allocated memory: 79.861 MB.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 0.1 seconds. CPU system time: 0 seconds. Elapsed time: 0.1 seconds; current allocated memory: 100.102 MB.
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 0.06 seconds. CPU system time: 0 seconds. Elapsed time: 0.06 seconds; current allocated memory: 92.514 MB.
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'matrix_vector' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'matrix_vector' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.13 seconds. CPU system time: 0 seconds. Elapsed time: 0.13 seconds; current allocated memory: 93.419 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.27 seconds. CPU system time: 0 seconds. Elapsed time: 0.28 seconds; current allocated memory: 94.363 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'matrix_vector' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrix_vector/M_0' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrix_vector/M_1' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrix_vector/M_2' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrix_vector/M_3' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrix_vector/M_4' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrix_vector/M_5' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrix_vector/M_6' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrix_vector/M_7' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrix_vector/V_In_0' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrix_vector/V_In_1' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrix_vector/V_In_2' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrix_vector/V_In_3' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrix_vector/V_In_4' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrix_vector/V_In_5' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrix_vector/V_In_6' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrix_vector/V_In_7' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrix_vector/V_Out' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'matrix_vector' to 'ap_ctrl_hs'.
+WARNING: [RTGEN 206-101] Port 'matrix_vector/M_1_address0' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'matrix_vector/M_1_address0' to 0.
+WARNING: [RTGEN 206-101] Port 'matrix_vector/M_1_ce0' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'matrix_vector/M_1_ce0' to 0.
+WARNING: [RTGEN 206-101] Port 'matrix_vector/M_1_we0' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'matrix_vector/M_1_we0' to 0.
+WARNING: [RTGEN 206-101] Port 'matrix_vector/M_1_d0' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'matrix_vector/M_1_d0' to 0.
+WARNING: [RTGEN 206-101] Port 'matrix_vector/M_1_q0' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'matrix_vector/M_1_address1' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'matrix_vector/M_1_address1' to 0.
+WARNING: [RTGEN 206-101] Port 'matrix_vector/M_1_ce1' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'matrix_vector/M_1_ce1' to 0.
+WARNING: [RTGEN 206-101] Port 'matrix_vector/M_1_we1' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'matrix_vector/M_1_we1' to 0.
+WARNING: [RTGEN 206-101] Port 'matrix_vector/M_1_d1' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'matrix_vector/M_1_d1' to 0.
+WARNING: [RTGEN 206-101] Port 'matrix_vector/M_1_q1' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'matrix_vector/M_2_address0' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'matrix_vector/M_2_address0' to 0.
+WARNING: [RTGEN 206-101] Port 'matrix_vector/M_2_ce0' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'matrix_vector/M_2_ce0' to 0.
+WARNING: [RTGEN 206-101] Port 'matrix_vector/M_2_we0' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'matrix_vector/M_2_we0' to 0.
+WARNING: [RTGEN 206-101] Port 'matrix_vector/M_2_d0' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'matrix_vector/M_2_d0' to 0.
+WARNING: [RTGEN 206-101] Port 'matrix_vector/M_2_q0' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'matrix_vector/M_2_address1' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'matrix_vector/M_2_address1' to 0.
+WARNING: [RTGEN 206-101] Port 'matrix_vector/M_2_ce1' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'matrix_vector/M_2_ce1' to 0.
+WARNING: [RTGEN 206-101] Port 'matrix_vector/M_2_we1' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'matrix_vector/M_2_we1' to 0.
+WARNING: [RTGEN 206-101] Port 'matrix_vector/M_2_d1' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'matrix_vector/M_2_d1' to 0.
+WARNING: [RTGEN 206-101] Port 'matrix_vector/M_2_q1' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'matrix_vector/M_3_address0' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'matrix_vector/M_3_address0' to 0.
+WARNING: [RTGEN 206-101] Port 'matrix_vector/M_3_ce0' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'matrix_vector/M_3_ce0' to 0.
+WARNING: [RTGEN 206-101] Port 'matrix_vector/M_3_we0' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'matrix_vector/M_3_we0' to 0.
+WARNING: [RTGEN 206-101] Port 'matrix_vector/M_3_d0' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'matrix_vector/M_3_d0' to 0.
+WARNING: [RTGEN 206-101] Port 'matrix_vector/M_3_q0' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'matrix_vector/M_3_address1' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'matrix_vector/M_3_address1' to 0.
+WARNING: [RTGEN 206-101] Port 'matrix_vector/M_3_ce1' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'matrix_vector/M_3_ce1' to 0.
+WARNING: [RTGEN 206-101] Port 'matrix_vector/M_3_we1' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'matrix_vector/M_3_we1' to 0.
+WARNING: [RTGEN 206-101] Port 'matrix_vector/M_3_d1' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'matrix_vector/M_3_d1' to 0.
+WARNING: [RTGEN 206-101] Port 'matrix_vector/M_3_q1' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'matrix_vector/M_4_address0' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'matrix_vector/M_4_address0' to 0.
+WARNING: [RTGEN 206-101] Port 'matrix_vector/M_4_ce0' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'matrix_vector/M_4_ce0' to 0.
+WARNING: [RTGEN 206-101] Port 'matrix_vector/M_4_we0' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'matrix_vector/M_4_we0' to 0.
+WARNING: [RTGEN 206-101] Port 'matrix_vector/M_4_d0' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'matrix_vector/M_4_d0' to 0.
+WARNING: [RTGEN 206-101] Port 'matrix_vector/M_4_q0' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'matrix_vector/M_4_address1' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'matrix_vector/M_4_address1' to 0.
+WARNING: [RTGEN 206-101] Port 'matrix_vector/M_4_ce1' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'matrix_vector/M_4_ce1' to 0.
+WARNING: [RTGEN 206-101] Port 'matrix_vector/M_4_we1' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'matrix_vector/M_4_we1' to 0.
+WARNING: [RTGEN 206-101] Port 'matrix_vector/M_4_d1' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'matrix_vector/M_4_d1' to 0.
+WARNING: [RTGEN 206-101] Port 'matrix_vector/M_4_q1' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'matrix_vector/M_5_address0' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'matrix_vector/M_5_address0' to 0.
+WARNING: [RTGEN 206-101] Port 'matrix_vector/M_5_ce0' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'matrix_vector/M_5_ce0' to 0.
+WARNING: [RTGEN 206-101] Port 'matrix_vector/M_5_we0' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'matrix_vector/M_5_we0' to 0.
+WARNING: [RTGEN 206-101] Port 'matrix_vector/M_5_d0' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'matrix_vector/M_5_d0' to 0.
+WARNING: [RTGEN 206-101] Port 'matrix_vector/M_5_q0' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'matrix_vector/M_5_address1' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'matrix_vector/M_5_address1' to 0.
+WARNING: [RTGEN 206-101] Port 'matrix_vector/M_5_ce1' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'matrix_vector/M_5_ce1' to 0.
+WARNING: [RTGEN 206-101] Port 'matrix_vector/M_5_we1' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'matrix_vector/M_5_we1' to 0.
+WARNING: [RTGEN 206-101] Port 'matrix_vector/M_5_d1' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'matrix_vector/M_5_d1' to 0.
+WARNING: [RTGEN 206-101] Port 'matrix_vector/M_5_q1' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'matrix_vector/M_6_address0' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'matrix_vector/M_6_address0' to 0.
+WARNING: [RTGEN 206-101] Port 'matrix_vector/M_6_ce0' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'matrix_vector/M_6_ce0' to 0.
+WARNING: [RTGEN 206-101] Port 'matrix_vector/M_6_we0' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'matrix_vector/M_6_we0' to 0.
+WARNING: [RTGEN 206-101] Port 'matrix_vector/M_6_d0' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'matrix_vector/M_6_d0' to 0.
+WARNING: [RTGEN 206-101] Port 'matrix_vector/M_6_q0' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'matrix_vector/M_6_address1' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'matrix_vector/M_6_address1' to 0.
+WARNING: [RTGEN 206-101] Port 'matrix_vector/M_6_ce1' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'matrix_vector/M_6_ce1' to 0.
+WARNING: [RTGEN 206-101] Port 'matrix_vector/M_6_we1' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'matrix_vector/M_6_we1' to 0.
+WARNING: [RTGEN 206-101] Port 'matrix_vector/M_6_d1' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'matrix_vector/M_6_d1' to 0.
+WARNING: [RTGEN 206-101] Port 'matrix_vector/M_6_q1' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'matrix_vector/M_7_address0' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'matrix_vector/M_7_address0' to 0.
+WARNING: [RTGEN 206-101] Port 'matrix_vector/M_7_ce0' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'matrix_vector/M_7_ce0' to 0.
+WARNING: [RTGEN 206-101] Port 'matrix_vector/M_7_we0' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'matrix_vector/M_7_we0' to 0.
+WARNING: [RTGEN 206-101] Port 'matrix_vector/M_7_d0' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'matrix_vector/M_7_d0' to 0.
+WARNING: [RTGEN 206-101] Port 'matrix_vector/M_7_q0' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'matrix_vector/M_7_address1' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'matrix_vector/M_7_address1' to 0.
+WARNING: [RTGEN 206-101] Port 'matrix_vector/M_7_ce1' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'matrix_vector/M_7_ce1' to 0.
+WARNING: [RTGEN 206-101] Port 'matrix_vector/M_7_we1' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'matrix_vector/M_7_we1' to 0.
+WARNING: [RTGEN 206-101] Port 'matrix_vector/M_7_d1' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'matrix_vector/M_7_d1' to 0.
+WARNING: [RTGEN 206-101] Port 'matrix_vector/M_7_q1' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2020.2 (64-bit)
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xc7z020-clg484-1'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1510] Running: set_part xc7z020clg484-1 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [HLS 200-1510] Running: set_directive_top -name matrix_vector matrix_vector 
+INFO: [HLS 200-1510] Running: set_directive_array_partition -type complete -dim 2 matrix_vector M 
+INFO: [HLS 200-1510] Running: set_directive_array_partition -type complete -dim 1 matrix_vector V_In 
+INFO: [HLS 200-1510] Running: set_directive_pipeline -II 1 matrix_vector/data_loop 
+INFO: [HLS 200-1510] Running: set_directive_unroll -factor 8 -skip_exit_check matrix_vector/dot_product_loop 
+INFO: [HLS 200-1510] Running: csynth_design 
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.01 seconds; current allocated memory: 76.382 MB.
+INFO: [HLS 200-10] Analyzing design file 'simple_dft.cpp' ... 
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 0.19 seconds. CPU system time: 0.12 seconds. Elapsed time: 0.15 seconds; current allocated memory: 76.792 MB.
+INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
+INFO: [HLS 214-248] complete partitioned array 'M' on dimension 2 (simple_dft.cpp:5:63)
+INFO: [HLS 214-248] complete partitioned array 'V_In' on dimension 1 (simple_dft.cpp:6:9)
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 2.36 seconds. CPU system time: 0.17 seconds. Elapsed time: 1.86 seconds; current allocated memory: 79.282 MB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0 seconds; current allocated memory: 79.283 MB.
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0.02 seconds. CPU system time: 0 seconds. Elapsed time: 0.02 seconds; current allocated memory: 80.527 MB.
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0.02 seconds. CPU system time: 0 seconds. Elapsed time: 0.02 seconds; current allocated memory: 79.774 MB.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 0.1 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.1 seconds; current allocated memory: 100.191 MB.
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 0.05 seconds. CPU system time: 0 seconds. Elapsed time: 0.06 seconds; current allocated memory: 92.676 MB.
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'matrix_vector' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'matrix_vector' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'data_loop'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 42, loop 'data_loop'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.05 seconds. CPU system time: 0 seconds. Elapsed time: 0.06 seconds; current allocated memory: 93.123 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.11 seconds. CPU system time: 0 seconds. Elapsed time: 0.12 seconds; current allocated memory: 93.587 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'matrix_vector' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrix_vector/M_0' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrix_vector/M_1' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrix_vector/M_2' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrix_vector/M_3' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrix_vector/M_4' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrix_vector/M_5' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrix_vector/M_6' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrix_vector/M_7' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrix_vector/V_In_0' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrix_vector/V_In_1' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrix_vector/V_In_2' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrix_vector/V_In_3' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrix_vector/V_In_4' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrix_vector/V_In_5' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrix_vector/V_In_6' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrix_vector/V_In_7' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrix_vector/V_Out' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'matrix_vector' to 'ap_ctrl_hs'.
+WARNING: [RTGEN 206-101] Port 'matrix_vector/M_1_address0' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'matrix_vector/M_1_address0' to 0.
+WARNING: [RTGEN 206-101] Port 'matrix_vector/M_1_ce0' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'matrix_vector/M_1_ce0' to 0.
+WARNING: [RTGEN 206-101] Port 'matrix_vector/M_1_we0' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'matrix_vector/M_1_we0' to 0.
+WARNING: [RTGEN 206-101] Port 'matrix_vector/M_1_d0' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'matrix_vector/M_1_d0' to 0.
+WARNING: [RTGEN 206-101] Port 'matrix_vector/M_1_q0' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'matrix_vector/M_1_address1' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'matrix_vector/M_1_address1' to 0.
+WARNING: [RTGEN 206-101] Port 'matrix_vector/M_1_ce1' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'matrix_vector/M_1_ce1' to 0.
+WARNING: [RTGEN 206-101] Port 'matrix_vector/M_1_we1' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'matrix_vector/M_1_we1' to 0.
+WARNING: [RTGEN 206-101] Port 'matrix_vector/M_1_d1' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'matrix_vector/M_1_d1' to 0.
+WARNING: [RTGEN 206-101] Port 'matrix_vector/M_1_q1' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'matrix_vector/M_2_address0' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'matrix_vector/M_2_address0' to 0.
+WARNING: [RTGEN 206-101] Port 'matrix_vector/M_2_ce0' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'matrix_vector/M_2_ce0' to 0.
+WARNING: [RTGEN 206-101] Port 'matrix_vector/M_2_we0' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'matrix_vector/M_2_we0' to 0.
+WARNING: [RTGEN 206-101] Port 'matrix_vector/M_2_d0' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'matrix_vector/M_2_d0' to 0.
+WARNING: [RTGEN 206-101] Port 'matrix_vector/M_2_q0' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'matrix_vector/M_2_address1' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'matrix_vector/M_2_address1' to 0.
+WARNING: [RTGEN 206-101] Port 'matrix_vector/M_2_ce1' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'matrix_vector/M_2_ce1' to 0.
+WARNING: [RTGEN 206-101] Port 'matrix_vector/M_2_we1' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'matrix_vector/M_2_we1' to 0.
+WARNING: [RTGEN 206-101] Port 'matrix_vector/M_2_d1' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'matrix_vector/M_2_d1' to 0.
+WARNING: [RTGEN 206-101] Port 'matrix_vector/M_2_q1' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'matrix_vector/M_3_address0' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'matrix_vector/M_3_address0' to 0.
+WARNING: [RTGEN 206-101] Port 'matrix_vector/M_3_ce0' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'matrix_vector/M_3_ce0' to 0.
+WARNING: [RTGEN 206-101] Port 'matrix_vector/M_3_we0' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'matrix_vector/M_3_we0' to 0.
+WARNING: [RTGEN 206-101] Port 'matrix_vector/M_3_d0' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'matrix_vector/M_3_d0' to 0.
+WARNING: [RTGEN 206-101] Port 'matrix_vector/M_3_q0' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'matrix_vector/M_3_address1' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'matrix_vector/M_3_address1' to 0.
+WARNING: [RTGEN 206-101] Port 'matrix_vector/M_3_ce1' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'matrix_vector/M_3_ce1' to 0.
+WARNING: [RTGEN 206-101] Port 'matrix_vector/M_3_we1' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'matrix_vector/M_3_we1' to 0.
+WARNING: [RTGEN 206-101] Port 'matrix_vector/M_3_d1' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'matrix_vector/M_3_d1' to 0.
+WARNING: [RTGEN 206-101] Port 'matrix_vector/M_3_q1' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'matrix_vector/M_4_address0' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'matrix_vector/M_4_address0' to 0.
+WARNING: [RTGEN 206-101] Port 'matrix_vector/M_4_ce0' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'matrix_vector/M_4_ce0' to 0.
+WARNING: [RTGEN 206-101] Port 'matrix_vector/M_4_we0' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'matrix_vector/M_4_we0' to 0.
+WARNING: [RTGEN 206-101] Port 'matrix_vector/M_4_d0' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'matrix_vector/M_4_d0' to 0.
+WARNING: [RTGEN 206-101] Port 'matrix_vector/M_4_q0' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'matrix_vector/M_4_address1' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'matrix_vector/M_4_address1' to 0.
+WARNING: [RTGEN 206-101] Port 'matrix_vector/M_4_ce1' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'matrix_vector/M_4_ce1' to 0.
+WARNING: [RTGEN 206-101] Port 'matrix_vector/M_4_we1' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'matrix_vector/M_4_we1' to 0.
+WARNING: [RTGEN 206-101] Port 'matrix_vector/M_4_d1' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'matrix_vector/M_4_d1' to 0.
+WARNING: [RTGEN 206-101] Port 'matrix_vector/M_4_q1' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'matrix_vector/M_5_address0' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'matrix_vector/M_5_address0' to 0.
+WARNING: [RTGEN 206-101] Port 'matrix_vector/M_5_ce0' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'matrix_vector/M_5_ce0' to 0.
+WARNING: [RTGEN 206-101] Port 'matrix_vector/M_5_we0' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'matrix_vector/M_5_we0' to 0.
+WARNING: [RTGEN 206-101] Port 'matrix_vector/M_5_d0' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'matrix_vector/M_5_d0' to 0.
+WARNING: [RTGEN 206-101] Port 'matrix_vector/M_5_q0' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'matrix_vector/M_5_address1' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'matrix_vector/M_5_address1' to 0.
+WARNING: [RTGEN 206-101] Port 'matrix_vector/M_5_ce1' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'matrix_vector/M_5_ce1' to 0.
+WARNING: [RTGEN 206-101] Port 'matrix_vector/M_5_we1' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'matrix_vector/M_5_we1' to 0.
+WARNING: [RTGEN 206-101] Port 'matrix_vector/M_5_d1' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'matrix_vector/M_5_d1' to 0.
+WARNING: [RTGEN 206-101] Port 'matrix_vector/M_5_q1' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'matrix_vector/M_6_address0' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'matrix_vector/M_6_address0' to 0.
+WARNING: [RTGEN 206-101] Port 'matrix_vector/M_6_ce0' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'matrix_vector/M_6_ce0' to 0.
+WARNING: [RTGEN 206-101] Port 'matrix_vector/M_6_we0' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'matrix_vector/M_6_we0' to 0.
+WARNING: [RTGEN 206-101] Port 'matrix_vector/M_6_d0' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'matrix_vector/M_6_d0' to 0.
+WARNING: [RTGEN 206-101] Port 'matrix_vector/M_6_q0' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'matrix_vector/M_6_address1' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'matrix_vector/M_6_address1' to 0.
+WARNING: [RTGEN 206-101] Port 'matrix_vector/M_6_ce1' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'matrix_vector/M_6_ce1' to 0.
+WARNING: [RTGEN 206-101] Port 'matrix_vector/M_6_we1' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'matrix_vector/M_6_we1' to 0.
+WARNING: [RTGEN 206-101] Port 'matrix_vector/M_6_d1' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'matrix_vector/M_6_d1' to 0.
+WARNING: [RTGEN 206-101] Port 'matrix_vector/M_6_q1' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'matrix_vector/M_7_address0' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'matrix_vector/M_7_address0' to 0.
+WARNING: [RTGEN 206-101] Port 'matrix_vector/M_7_ce0' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'matrix_vector/M_7_ce0' to 0.
+WARNING: [RTGEN 206-101] Port 'matrix_vector/M_7_we0' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'matrix_vector/M_7_we0' to 0.
+WARNING: [RTGEN 206-101] Port 'matrix_vector/M_7_d0' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'matrix_vector/M_7_d0' to 0.
+WARNING: [RTGEN 206-101] Port 'matrix_vector/M_7_q0' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'matrix_vector/M_7_address1' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'matrix_vector/M_7_address1' to 0.
+WARNING: [RTGEN 206-101] Port 'matrix_vector/M_7_ce1' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'matrix_vector/M_7_ce1' to 0.
+WARNING: [RTGEN 206-101] Port 'matrix_vector/M_7_we1' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'matrix_vector/M_7_we1' to 0.
+WARNING: [RTGEN 206-101] Port 'matrix_vector/M_7_d1' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'matrix_vector/M_7_d1' to 0.
+WARNING: [RTGEN 206-101] Port 'matrix_vector/M_7_q1' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'matrix_vector/V_In_1' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2020.2 (64-bit)
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2020.2 (64-bit)
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+==============================================================

@@ -1,0 +1,32 @@
+<AutoPilot:ProjectResources xmlns:AutoPilot="com.autoesl.autopilot.ui.directiveView">
+    <sourceFile name="">
+        <directive functionName="matrix_vector" label="" functionLabel="">
+            <pragma name="TOP">
+                <option name="name" value="matrix_vector"/>
+            </pragma>
+        </directive>
+        <directive functionName="matrix_vector" label="" functionLabel="">
+            <pragma name="ARRAY_PARTITION">
+                <option name="variable" value="M" positionalBoolean="4"/>
+                <option name="complete" value="" positionalBoolean="type"/>
+                <option name="dim" value="2"/>
+            </pragma>
+        </directive>
+        <directive functionName="matrix_vector" label="" functionLabel="">
+            <pragma name="ARRAY_PARTITION">
+                <option name="variable" value="V_In" positionalBoolean="4"/>
+                <option name="complete" value="" positionalBoolean="type"/>
+                <option name="dim" value="1"/>
+            </pragma>
+        </directive>
+        <directive functionName="matrix_vector" label="data_loop" functionLabel="">
+            <pragma name="PIPELINE"/>
+        </directive>
+        <directive functionName="matrix_vector" label="" functionLabel="">
+            <pragma name="TOP">
+                <option name="name" value="matrix_vector"/>
+            </pragma>
+        </directive>
+    </sourceFile>
+</AutoPilot:ProjectResources>
+

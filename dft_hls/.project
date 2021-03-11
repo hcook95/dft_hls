@@ -37,9 +37,14 @@
 			<location>/home/hayden/Documents/dft_hls/dft_hls/.apc/.tb</location>
 		</link>
 		<link>
-			<name>solution1/constraints</name>
+			<name>base_solution/constraints</name>
 			<type>2</type>
-			<location>/home/hayden/Documents/dft_hls/dft_hls/solution1/.tcls</location>
+			<location>/home/hayden/Documents/dft_hls/dft_hls/base_solution/.tcls</location>
+		</link>
+		<link>
+			<name>my_solution/constraints</name>
+			<type>2</type>
+			<location>/home/hayden/Documents/dft_hls/dft_hls/my_solution/.tcls</location>
 		</link>
 		<link>
 			<name>source/simple_dft.cpp</name>
@@ -47,24 +52,99 @@
 			<location>/home/hayden/Documents/dft_hls/simple_dft.cpp</location>
 		</link>
 		<link>
+			<name>test_solution/constraints</name>
+			<type>2</type>
+			<location>/home/hayden/Documents/dft_hls/dft_hls/test_solution/.tcls</location>
+		</link>
+		<link>
 			<name>testbench/dft_test.cpp</name>
 			<type>1</type>
 			<location>/home/hayden/Documents/dft_hls/dft_test.cpp</location>
 		</link>
 		<link>
-			<name>solution1/constraints/.xml.directive</name>
-			<type>1</type>
-			<location>/home/hayden/Documents/dft_hls/dft_hls/solution1/solution1.directive</location>
+			<name>text_solution1/constraints</name>
+			<type>2</type>
+			<location>/home/hayden/Documents/dft_hls/dft_hls/text_solution1/.tcls</location>
 		</link>
 		<link>
-			<name>solution1/constraints/directives.tcl</name>
-			<type>1</type>
-			<location>/home/hayden/Documents/dft_hls/dft_hls/solution1/directives.tcl</location>
+			<name>text_solution2/constraints</name>
+			<type>2</type>
+			<location>/home/hayden/Documents/dft_hls/dft_hls/text_solution2/.tcls</location>
 		</link>
 		<link>
-			<name>solution1/constraints/script.tcl</name>
+			<name>base_solution/constraints/.xml.directive</name>
 			<type>1</type>
-			<location>/home/hayden/Documents/dft_hls/dft_hls/solution1/script.tcl</location>
+			<location>/home/hayden/Documents/dft_hls/dft_hls/base_solution/base_solution.directive</location>
+		</link>
+		<link>
+			<name>base_solution/constraints/directives.tcl</name>
+			<type>1</type>
+			<location>/home/hayden/Documents/dft_hls/dft_hls/base_solution/directives.tcl</location>
+		</link>
+		<link>
+			<name>base_solution/constraints/script.tcl</name>
+			<type>1</type>
+			<location>/home/hayden/Documents/dft_hls/dft_hls/base_solution/script.tcl</location>
+		</link>
+		<link>
+			<name>my_solution/constraints/.xml.directive</name>
+			<type>1</type>
+			<location>/home/hayden/Documents/dft_hls/dft_hls/my_solution/my_solution.directive</location>
+		</link>
+		<link>
+			<name>my_solution/constraints/directives.tcl</name>
+			<type>1</type>
+			<location>/home/hayden/Documents/dft_hls/dft_hls/my_solution/directives.tcl</location>
+		</link>
+		<link>
+			<name>my_solution/constraints/script.tcl</name>
+			<type>1</type>
+			<location>/home/hayden/Documents/dft_hls/dft_hls/my_solution/script.tcl</location>
+		</link>
+		<link>
+			<name>test_solution/constraints/.xml.directive</name>
+			<type>1</type>
+			<location>/home/hayden/Documents/dft_hls/dft_hls/test_solution/test_solution.directive</location>
+		</link>
+		<link>
+			<name>test_solution/constraints/directives.tcl</name>
+			<type>1</type>
+			<location>/home/hayden/Documents/dft_hls/dft_hls/test_solution/directives.tcl</location>
+		</link>
+		<link>
+			<name>test_solution/constraints/script.tcl</name>
+			<type>1</type>
+			<location>/home/hayden/Documents/dft_hls/dft_hls/test_solution/script.tcl</location>
+		</link>
+		<link>
+			<name>text_solution1/constraints/.xml.directive</name>
+			<type>1</type>
+			<location>/home/hayden/Documents/dft_hls/dft_hls/text_solution1/text_solution1.directive</location>
+		</link>
+		<link>
+			<name>text_solution1/constraints/directives.tcl</name>
+			<type>1</type>
+			<location>/home/hayden/Documents/dft_hls/dft_hls/text_solution1/directives.tcl</location>
+		</link>
+		<link>
+			<name>text_solution1/constraints/script.tcl</name>
+			<type>1</type>
+			<location>/home/hayden/Documents/dft_hls/dft_hls/text_solution1/script.tcl</location>
+		</link>
+		<link>
+			<name>text_solution2/constraints/.xml.directive</name>
+			<type>1</type>
+			<location>/home/hayden/Documents/dft_hls/dft_hls/text_solution2/text_solution2.directive</location>
+		</link>
+		<link>
+			<name>text_solution2/constraints/directives.tcl</name>
+			<type>1</type>
+			<location>/home/hayden/Documents/dft_hls/dft_hls/text_solution2/directives.tcl</location>
+		</link>
+		<link>
+			<name>text_solution2/constraints/script.tcl</name>
+			<type>1</type>
+			<location>/home/hayden/Documents/dft_hls/dft_hls/text_solution2/script.tcl</location>
 		</link>
 	</linkedResources>
 </projectDescription>

@@ -5,7 +5,11 @@
     <file name="../../dft_test.cpp" sc="0" tb="1" cflags="" csimflags=""/>
   </files>
   <solutions>
-    <solution name="solution1" status="active"/>
+    <solution name="base_solution" status="inactive"/>
+    <solution name="test_solution" status="inactive"/>
+    <solution name="text_solution1" status="inactive"/>
+    <solution name="text_solution2" status="inactive"/>
+    <solution name="my_solution" status="active"/>
   </solutions>
   <includePaths/>
   <libraryPaths/>

@@ -1,0 +1,88 @@
+INFO: [HLS 200-10] Running '/tools/Xilinx/Vitis_HLS/2020.2/bin/unwrapped/lnx64.o/vitis_hls'
+INFO: [HLS 200-10] For user 'hayden' on host 'hayden-desktop' (Linux_x86_64 version 5.8.0-44-generic) on Wed Mar 10 23:57:26 MST 2021
+INFO: [HLS 200-10] On os Ubuntu 20.04.2 LTS
+INFO: [HLS 200-10] In directory '/home/hayden/Documents/dft_hls'
+Sourcing Tcl script '/home/hayden/Documents/dft_hls/dft_hls/text_solution1/csynth.tcl'
+INFO: [HLS 200-1510] Running: open_project dft_hls 
+INFO: [HLS 200-10] Opening project '/home/hayden/Documents/dft_hls/dft_hls'.
+INFO: [HLS 200-1510] Running: set_top matrix_vector 
+INFO: [HLS 200-1510] Running: add_files simple_dft.cpp 
+INFO: [HLS 200-10] Adding design file 'simple_dft.cpp' to the project
+INFO: [HLS 200-1510] Running: add_files -tb dft_test.cpp 
+INFO: [HLS 200-10] Adding test bench file 'dft_test.cpp' to the project
+INFO: [HLS 200-1510] Running: open_solution text_solution1 -flow_target vivado 
+INFO: [HLS 200-10] Opening solution '/home/hayden/Documents/dft_hls/dft_hls/text_solution1'.
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xc7z020-clg484-1'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+Resolution: For help on HLS 200-1505 see www.xilinx.com/cgi-bin/docs/rdoc?v=2020.2;t=hls+guidance;d=200-1505.html
+INFO: [HLS 200-1510] Running: set_part xc7z020clg484-1 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [HLS 200-1510] Running: set_directive_top -name matrix_vector matrix_vector 
+INFO: [HLS 200-1510] Running: set_directive_array_partition -type complete -dim 2 matrix_vector M 
+INFO: [HLS 200-1510] Running: set_directive_array_partition -type complete -dim 1 matrix_vector V_In 
+INFO: [HLS 200-1510] Running: set_directive_pipeline matrix_vector/data_loop 
+INFO: [HLS 200-1510] Running: csynth_design 
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0.01 seconds. CPU system time: 0 seconds. Elapsed time: 0.01 seconds; current allocated memory: 76.368 MB.
+INFO: [HLS 200-10] Analyzing design file 'simple_dft.cpp' ... 
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 0.19 seconds. CPU system time: 0.14 seconds. Elapsed time: 0.17 seconds; current allocated memory: 76.744 MB.
+INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
+INFO: [HLS 214-186] Unrolling loop 'dot_product_loop' (simple_dft.cpp:13:9) in function 'matrix_vector' completely with a factor of 8 (simple_dft.cpp:13:9)
+INFO: [HLS 214-248] complete partitioned array 'M' on dimension 2 (simple_dft.cpp:5:63)
+INFO: [HLS 214-248] complete partitioned array 'V_In' on dimension 1 (simple_dft.cpp:6:9)
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 2.48 seconds. CPU system time: 0.17 seconds. Elapsed time: 1.97 seconds; current allocated memory: 79.338 MB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0 seconds; current allocated memory: 79.339 MB.
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0.02 seconds. CPU system time: 0 seconds. Elapsed time: 0.02 seconds; current allocated memory: 80.580 MB.
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0.02 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.03 seconds; current allocated memory: 79.829 MB.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 0.1 seconds. CPU system time: 0 seconds. Elapsed time: 0.1 seconds; current allocated memory: 100.295 MB.
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 0.06 seconds. CPU system time: 0 seconds. Elapsed time: 0.06 seconds; current allocated memory: 92.914 MB.
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'matrix_vector' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'matrix_vector' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'data_loop'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 47, loop 'data_loop'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.09 seconds. CPU system time: 0 seconds. Elapsed time: 0.09 seconds; current allocated memory: 93.524 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.15 seconds. CPU system time: 0 seconds. Elapsed time: 0.16 seconds; current allocated memory: 94.228 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'matrix_vector' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrix_vector/M_0' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrix_vector/M_1' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrix_vector/M_2' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrix_vector/M_3' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrix_vector/M_4' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrix_vector/M_5' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrix_vector/M_6' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrix_vector/M_7' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrix_vector/V_In_0' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrix_vector/V_In_1' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrix_vector/V_In_2' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrix_vector/V_In_3' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrix_vector/V_In_4' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrix_vector/V_In_5' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrix_vector/V_In_6' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrix_vector/V_In_7' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrix_vector/V_Out' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'matrix_vector' to 'ap_ctrl_hs'.
+INFO: [RTGEN 206-100] Generating core module 'fadd_32ns_32ns_32_5_full_dsp_1': 8 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fmul_32ns_32ns_32_4_max_dsp_1': 8 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'matrix_vector'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.12 seconds. CPU system time: 0 seconds. Elapsed time: 0.11 seconds; current allocated memory: 95.794 MB.
+INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 0.8 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.81 seconds; current allocated memory: 106.084 MB.
+INFO: [VHDL 208-304] Generating VHDL RTL for matrix_vector.
+INFO: [VLOG 209-307] Generating Verilog RTL for matrix_vector.
+INFO: [HLS 200-790] **** Loop Constraint Status: All loop constraints were satisfied.
+INFO: [HLS 200-789] **** Estimated Fmax: 137.82 MHz
+INFO: [HLS 200-111] Finished Command csynth_design CPU user time: 4.14 seconds. CPU system time: 0.33 seconds. Elapsed time: 3.63 seconds; current allocated memory: 106.503 MB.
+INFO: [HLS 200-112] Total CPU user time: 4.95 seconds. Total CPU system time: 0.6 seconds. Total elapsed time: 4.42 seconds; peak allocated memory: 106.084 MB.

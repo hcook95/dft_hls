@@ -1,0 +1,26 @@
+
+
+================================================================
+== Synthesis Summary Report of 'matrix_vector'
+================================================================
++ General Information: 
+    * Date:           Wed Mar 10 22:56:53 2021
+    * Version:        2020.2 (Build 3064766 on Wed Nov 18 09:12:47 MST 2020)
+    * Project:        dft_hls
+    * Solution:       base_solution (Vivado IP Flow Target)
+    * Product family: zynq
+    * Target device:  xc7z020-clg484-1
+    
+
++ Performance & Resource Estimates: 
+    
+    PS: '+' for module; 'o' for loop; '*' for dataflow
+    +----------------------+------+-------+---------+-----------+----------+---------+------+----------+------+--------+-----------+-----------+-----+
+    |        Modules       | Issue|       | Latency |  Latency  | Iteration|         | Trip |          |      |        |           |           |     |
+    |        & Loops       | Type | Slack | (cycles)|    (ns)   |  Latency | Interval| Count| Pipelined| BRAM |   DSP  |     FF    |    LUT    | URAM|
+    +----------------------+------+-------+---------+-----------+----------+---------+------+----------+------+--------+-----------+-----------+-----+
+    |+ matrix_vector       |     -|  -0.76|      785|  7.850e+03|         -|      786|     -|        no|     -|  3 (1%)|  621 (~0%)|  1201 (2%)|    -|
+    | o data_loop          |     -|  -7.30|      784|  7.840e+03|        98|        -|     8|        no|     -|       -|          -|          -|    -|
+    |  o dot_product_loop  |     -|  -7.30|       96|    960.000|        12|        -|     8|        no|     -|       -|          -|          -|    -|
+    +----------------------+------+-------+---------+-----------+----------+---------+------+----------+------+--------+-----------+-----------+-----+
+
